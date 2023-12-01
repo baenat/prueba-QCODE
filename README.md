@@ -1,8 +1,8 @@
-## Prueba Tecnica - QCODE
+# Prueba Tecnica - QCODE
 
 - Julian Baena
 
-### Lenguaje y Framework
+## Lenguaje y Framework
 
 - Javascript y NodeJS con Express
 
@@ -11,66 +11,60 @@
 ![GIT](https://img.shields.io/badge/Git-fc6d26?style=for-the-badge&logo=git&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) 
 
-### Requisitos previos
+## Requisitos previos
 
 Necesitará las siguientes cosas correctamente instaladas en su computadora.
 
 - [Nodejs](https://nodejs.org/en)
 - [Git](http://git-scm.com/)
 
-### Instalación
+## Instalación
 
 - Clonar repositorio
   - `git clone https://github.com/baenat/prueba-QCODE.git`
 - Ingresar a carpeta
   - `prueba_QCODE`
-- Metodo
+- método realizado
   - `getSpacesAvailable`
 
-### Instalar dependencias
+## Instalar dependencias
 
 ```
 npm install
 ```
 
-### Ejecutar entorno de desarrollo
+## Ejecutar entorno de desarrollo
 
 ```
 npm run start
 ```
 
-### Como usar
+## Como usar | API
 
-Servicio recibe la mediante url el dia de la semana
+Servicio recibe mediante params en la url el dia de la semana
 
-
-
-API
-
+## GET
 ```
 http://localhost:3000/api/spacesAvailable?day=jueves
 ```
-
-```json
-GET:
-
+```
 RESPONSE CODE: 200
-
+```
+```json
 {
 	"day": "JUEVES",
 	"spacesAvailable": 8,
 	"message": "Total de espacios disponibles para el (JUEVES) son: 8"
 }
 ```
-
+------------
 ```
 http://localhost:3000/api/spacesAvailable?day=name
 ```
+```
+RESPONSE CODE: 400
+```
 ```json
-GET:
-
-RESPONDE CODE 400
-
 {
 	"message": "No es un dia de la semana válido"
 }
